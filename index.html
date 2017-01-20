@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+  </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>voilier</title>
+    <script src="/js/jquery-3.1.1.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+			<div class="row">
+			  <div class="col-md-12 col-sm-8 col-xs-12">
+					  <h1>donnees voilier</h1>
+			  </div>
+			</div>
+			  
+			<div class="row">	
+			  <div class="col-md-12 col-sm-8 col-xs-12">
+					  <h3>Cartographie </h3>
+			  </div>
+			</div>
+			  
+			<div class="row"> 
+			  <div class="col-md-12 col-sm-8 col-xs-12">
+					  <h3><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d84780.28568573085!2d-4.469652159619148!3d48.391569767579384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1479915859403" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></h3>
+			  </div>
+			</div>
+			  
+			  
+			<div class="row">
+				<div class="col-md-6 col-sm-9 col-xs-6" style="text-align:center">
+					<h3>safran</h3>
+					<input type="range" id="rangeInput" style="width: 250px" name="rangeInput" min="-90" max="90" value="0" step="1" onchange="change_SAFRAN()">
+					<p id="resultat_safran"></p>
+				</div>
+				
+
+				
+				<div class="col-md-6 col-sm-6 col-xs-6" style="text-align:center">
+					<h3>voile</h3>
+					<input type="range" id="rangeInputv" style="width: 250px;" name="rangeInputv" min="-90" max="90" value="0" step="1" onchange="change_GV()">
+
+					<p id="resultat_gv"></p>
+					
+				</div>
+
+				
+
+			</div>
+
+<script type="text/javascript">
+
+function change_GV()
+{
+	$("#resultat_gv").html($("#rangeInputv").val());
+}
+function change_SAFRAN()
+{
+	$("#resultat_safran").html($("#rangeInput").val());
+}
+</script>
+
+  </body>
+</html>

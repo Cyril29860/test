@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+import cgi
+
+print 'Content_type: text/html'
+print
+
+form=cgi.FieldsStorage()
+val=form.getValue('safran')
+
+print 'Vous souhaitez regler le safran à',val,'°'
